@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: min(100% - 30px, 1300px);
+    box-shadow: 0px 8px 12px rgba(60, 64, 67, 0.15), 0px 4px 4px rgba(60, 64, 67, 0.3);
+    height: 70vh;
+    padding: 10px;
+    border-radius: 8px;
+
+}
+
+nav {
+    height: 80%;
+
+}
+
+ul {
+
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+
+}
+
+nav ul li {
+    flex-grow: 1;
+    cursor: pointer;
+    color: #557476;
+}
+
+nav ul li:hover {
+    color: #3c3f42;
+}
+
+.box-1,
+.box-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: min(100% - 30px, 480px);
+    height: 80%;
+    gap: 6px;
+    background-color: #fff;
+}
+
+.box-content-1,
+.box-content-2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 8px 12px rgba(60, 64, 67, 0.15), 0px 4px 4px rgba(60, 64, 67, 0.3);
+}
+
+label {
+    display: block;
+    margin-bottom: -1px;
+    color: #0e0e0e;
+    text-transform: capitalize;
+    font-size: .9rem;
+    font-family: 'Inconsolata', monospace;
+    text-transform: uppercase;
+}
+
+input::placeholder {
+    color: #ced0d1;
+    font-weight: lighter;
+}
+
+input {
+    width: 108px;
+    background: #fff;
+    color: #67788a;
+    border: 0;
+    height: 40px;
+    border-radius: 2px;
+    padding-left: 10px;
+    border: 1px solid #557476;
+}
+
+input:focus {
+    background: rgb(245, 245, 151);
+}
+
+#vlr-fiscal {
+    color: #c19950;
+    font-weight: bold;
+    font-size: .8rem
+}
+
+.v-custo {
+    width: 450px;
+    text-align: end;
+    padding-right: 10px;
+    font-size: 1.5rem !important;
+    line-height: 1.8 !important;
+    color: #c19950 !important;
+    font-weight: 500 !important;
+}
+
+.item p {
+    display: block;
+    margin-bottom: -1px;
+    color: #303438;
+    text-transform: capitalize;
+    font-size: .9rem;
+    font-family: 'Inconsolata', monospace;
+    text-transform: uppercase;
+}
+
+
+.item div {
+    width: 108px;
+    background: #fff;
+    color: #67788a;
+    border: 0;
+    height: 40px;
+    border-radius: 2px;
+    padding-left: 10px;
+    font-size: .8rem;
+    line-height: 3.2;
+    border: 1px solid #557476;
+    text-align: center;
+}
+
+.avista,
+.aprazo {
+    width: 166px !important;
+    text-align: end;
+    padding-right: 10px;
+    font-size: 1.2rem !important;
+    line-height: 2 !important;
+    color: #218838 !important;
+    font-weight: 500 !important;
+}
+
+.m-custo {
+    width: 450px !important;
+    text-align: end !important;
+    padding-right: 10px;
+    font-size: 1.5rem !important;
+    line-height: 1.8 !important;
+    color: #c19950 !important;
+    font-weight: 500 !important;
+}
+
+
+.button {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: #557476;
+    color: #fff;
+    box-shadow: 0px 6px 4px rgba(60, 64, 67, 0.15), 0px 2px 2px rgba(60, 64, 67, 0.3);
+    cursor: pointer;
+    transition: .3s;
+    font-size: 1rem;
+    border: 1px solid gray;
+}
+
+button:hover {
+    color: #c19950
+}
+
+@media(max-width: 1200px) {
+
+    .box-1,
+    .box-2 {
+        width: min(100% - 30px, 380px);
+    }
+
+    .avista,
+    .aprazo {
+        width: 138px !important;
+    }
+
+    input {
+        width: 90px;
+    }
+
+    .item div {
+        width: 88px;
+    }
+
+    .v-custo {
+        width: 370px !important;
+    }
+
+    .m-custo {
+        width: 370px !important;
+    }
+
+    button {
+        width: 380px;
+    }
+
+    nav ul li {
+        font-size: .8rem;
+    }
+}

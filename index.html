@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet" />
+    <title>Calculadora de preço</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>Região Norte e Nordeste
+                    <span>10,84%</span>
+                </li>
+                <li>Região Sul e Suldeste
+                    <span>11,93%</span>
+                </li>
+                <li>Região do própio Estado
+                    <span>4,53%</span>
+                </li>
+                <li>Cesta Básica Norte e Nordeste
+                    <span>4,16%</span>
+                </li>
+                <li>Cesta Básica sul e suldeste
+                    <span>5,12%</span>
+                </li>
+                <li>Importado cst 100
+                    <span>15.54%</span>
+                </li>
+
+            </ul>
+        </nav>
+        <div class="box-1">
+            <div class="box-content-1">
+                <div class="item">
+                    <label>compra</label>
+                    <input type="text" class="compra" id="compra" placeholder="0,00" autofocus="true">
+                </div>
+
+                <div class="item">
+                    <label>%ipi</label>
+                    <input type="text" class="ipi" id="ipi" placeholder="0,00" autofocus="true">
+                </div>
+                <div class="item">
+                    <label>%frete</label>
+                    <input type="text" class="frete" id="frete" placeholder="0,00" autofocus="true">
+                </div>
+                <div class="item">
+                    <label>v-frete</label>
+                    <input type="text" class="v-frete" id="v-frete" placeholder="0,00" autofocus="true">
+                </div>
+                <div class="item">
+                    <label>%outros</label>
+                    <input type="text" class="outros" id="outros" placeholder="0,00" autofocus="true">
+                </div>
+                <div class="item">
+                    <label>%base</label>
+                    <input type="text" class="base" value="40" autofocus="true" list="base">
+
+                </div>
+                <div class="item">
+                    <label>%Tributação</label>
+                    <input type="text" class="icms" id="icms" autofocus="true" list="aliquota">
+
+
+                </div>
+                <div class="item">
+                    <label>%v.vista</label>
+                    <input type="text" class="preco1" id="preco1" placeholder="0,00" autofocus="true">
+                </div>
+                <div class="item">
+                    <label>%v.prazo</label>
+                    <input type="text" class="preco2" id="preco2" class="preco1" placeholder="0,00" autofocus="true">
+                </div>
+                <div class="item">
+                    <label>%p.fiscal</label>
+                    <input type="text" class="preco4" id="preco4" value="25" autofocus="true">
+                </div>
+                <div class="item">
+                    <label>%pis/cofins</label>
+                    <input type="text" class="margem-pis-cofins" id="pis-cofins" value="9.25" autofocus="true">
+                </div>
+                <div class="item">
+                    <label>v.pis/cofins</label>
+                    <input class="valor-pis-cofins" id="pisCofins">
+                </div>
+                <div class="item">
+                    <label>v.Custo</label>
+                    <input class="v-custo" id="v-custo">
+                </div>
+            </div>
+            <div class="button">
+                <button class="btn btn-calcular">Calcular</button>
+            </div>
+        </div>
+        <div class="box-2">
+            <div class="box-content-2">
+                <div class="item">
+                    <p class="label">v.ipi</p>
+                    <div class="v-output" id="vlr-ipi"></div>
+                </div>
+                <div class="item">
+                    <p class="label">%frete</p>
+                    <div class="v-output" id="vlr-frete"></div>
+                </div>
+                <div class="item">
+                    <p class="label">v.frete</p>
+                    <div class="v-output" id="v-frete"></div>
+                </div>
+                <div class="item">
+                    <p class="label">v.outros</p>
+                    <div class="v-output" id="vlr-outros"></div>
+                </div>
+
+                <div class="item">
+                    <p class="label">icms</p>
+                    <div class="v-output" id="vlr-icms"></div>
+                </div>
+                <div class="item">
+                    <p class="label">v.fiscal</p>
+                    <div class="v-output" id="vlr-fiscal"></div>
+                </div>
+                <div class="item">
+                    <p class="label">Custo/avista</p>
+                    <div class="v-output" id="custo-avista"></div>
+                </div>
+                <div class="item">
+                    <p class="label">Custo/aprazo</p>
+                    <div class="v-output" id="custo-aprazo"></div>
+                </div>
+
+                <div class="item">
+                    <p class="label">v.pis/cofins</p>
+                    <div class="v-output" id="v-pisCofins"></div>
+                </div>
+
+                <div class="item">
+                    <p class="label">V.Avista</p>
+                    <div class="avista" id="avista"></div>
+                </div>
+                <div class="item">
+                    <p class="label">V.Aprazo</p>
+                    <div class="aprazo" id="aprazo"></div>
+                </div>
+                <div class="item">
+                    <p class="label">M.Custo</p>
+                    <div class="m-custo" id="m-custo"></div>
+                </div>
+            </div>
+            <div class="button">
+                <button class="btn btn-limpar" id="btn">Limpar</button>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
