@@ -20,7 +20,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: min(100% - 30px, 1300px);
+    width: min(100% - 30px, 1350px);
     box-shadow: 0px 8px 12px rgba(60, 64, 67, 0.15), 0px 4px 4px rgba(60, 64, 67, 0.3);
     height: 70vh;
     padding: 10px;
